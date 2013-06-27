@@ -44,6 +44,7 @@ cd ~
 wget ${HADOOP_INSTALL_PACKAGE}
 tar -xvf hadoop-1.1.2.tar.gz
 sudo mv hadoop-1.1.2 /usr/local/hadoop
+sudo chown -R hduser:hadoop /usr/local/hadoop
 echo "Hadoop Successfully Installed. Configuring..."
 
 #Configure Hadoop
