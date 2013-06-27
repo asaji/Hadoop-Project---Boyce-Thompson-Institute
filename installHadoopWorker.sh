@@ -44,7 +44,6 @@ cd ~
 wget ${HADOOP_INSTALL_PACKAGE}
 tar -xvf hadoop-1.1.2.tar.gz
 sudo mv hadoop-1.1.2 /usr/local/hadoop
-sudo chown -R hduser:hadoop /usr/local/hadoop
 echo "Hadoop Successfully Installed. Configuring..."
 
 #Configure Hadoop
@@ -94,6 +93,9 @@ echo "/usr/local/hadoop/conf/mapred-site.xml updated."
 sudo cp /usr/local/hadoop/conf/hdfs-site.xml /usr/local/hadoop/conf/hdfs-site.xml.old
 sudo sed -e "s|<configuration>|<configuration>\n<property>\n<name>dfs.replication</name>\n<value>${DFS_REPLICATION_COUNT}</value>\n</property>|" /usr/local/hadoop/conf/hdfs-site.xml.old > /usr/local/hadoop/conf/hdfs-site.xml
 echo "/usr/local/hadoop/conf/hdfs-site.xml updated."
+
+#Finalize the install by giving hduser permission over the Hadoop Directory
+sudo chown -R hduser:hadoop /usr/local/hadoop
 
 #Termination Message
 echo "This worker node is ready to go! Make sure your master:conf/slaves file contains the host name of this node. HDFS must be reformatted as well."
