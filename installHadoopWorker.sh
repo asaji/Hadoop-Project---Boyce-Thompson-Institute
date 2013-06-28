@@ -81,7 +81,7 @@ echo "HDFS Directories (/app/hadoop/) created. Permissions set."
 
   #Configure /usr/local/hadoop/conf/core-site.xml
 sudo cp /usr/local/hadoop/conf/core-site.xml /usr/local/hadoop/conf/core-site.xml.old
-sudo sed -e "s|<configuration>|<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://${MASTER_NODE_NAME}:54310</value>\n<description>Name of the default file system</description>\n</property>\n<property>\n<name>hadoop.tmp.dir</name>\n<value>/app/hadoop/tmp</value>\n<description>Base for temporary directories</description>\n</property>|" /usr/local/hadoop/conf/core-site.xml.old > /usr/local/hadoop/conf/core-site.xml
+sudo sed -e "s|<configuration>|<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://${MASTER_NODE_NAME}:8020</value>\n<description>Name of the default file system</description>\n</property>\n<property>\n<name>hadoop.tmp.dir</name>\n<value>/app/hadoop/tmp</value>\n<description>Base for temporary directories</description>\n</property>|" /usr/local/hadoop/conf/core-site.xml.old > /usr/local/hadoop/conf/core-site.xml
 echo "/usr/local/hadoop/conf/core-site.xml updated."
 
   #Configure /usr/local/hadoop/conf/mapred-site.xml
