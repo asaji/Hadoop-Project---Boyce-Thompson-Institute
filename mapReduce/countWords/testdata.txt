@@ -5,11 +5,5 @@ box	1
 box	1
 japan	1
 japan	1
-japan	1
-japan	1
-japan	1
-japan	1
-japan	1
-japan	1
-japan	1
-japan	1
+monkey	1
+monkey	1
