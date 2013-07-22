@@ -1,4 +1,4 @@
-#!/bin/usr/perl
+#!/usr/bin/perl
 
 use 5.010;
 use warnings;
@@ -11,12 +11,13 @@ my $currentCount = 0;
 #open(my $fh, "<", "testdata.txt");
 #while(!eof $fh) {}
 
-while($line = <>) {
+while(my $line = <>) {
+
 	#Remove the \n
 	chomp $line;
 
 	#Index 0 is the word, index 1 is the count value
-	my @lineData = split('\t', $line);
+	my @lineData = split(/\t/, $line);
 	my $word = $lineData[0];
 	my $count = $lineData[1];
 

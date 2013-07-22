@@ -8,6 +8,6 @@ while(my $line = <>) {
 	my @words = split(' ', $line);
 
 	foreach my $word(@words) {
-		print "$word \t 1 \n";
+		print "$word \t 1\n";
 	}
 }
