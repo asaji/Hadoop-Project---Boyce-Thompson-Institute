@@ -1,0 +1,4 @@
+GBS Value Information:
+0 = heterozygous
+1 = reference allele 
+-1 = alternate allele
